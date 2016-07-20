@@ -1,0 +1,21 @@
+@import './utils/normalize.css';
+
+html {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 10px;
+
+  background: #0147A7;
+  color: #fff;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+

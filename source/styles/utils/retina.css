@@ -1,0 +1,16 @@
+
+@define-mixin retina-background $image {
+  background-position: center center;
+  background-image: url($image) at-2x;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@define-mixin retina-image $image {
+  background-position: center center;
+  background-image: url($image) at-2x;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: image-width($image);
+  height: image-height($image);
+}
