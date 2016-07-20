@@ -1,4 +1,14 @@
 @import './utils/normalize.css';
+@import './fonts/roboto-regular.css';
+@import './fonts/roboto-black.css';
+
+@import './utils/responsive.css';
+@import './utils/retina.css';
+@import './utils/colors.css';
+@import './utils/easings.css';
+@import './utils/variables.css';
+
+
 
 html {
   position: fixed;
@@ -8,14 +18,59 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 10px;
-
-  background: #0147A7;
-  color: #fff;
+  font-family: $font-regular;
 }
 
 body {
   position: relative;
   width: 100%;
   height: 100%;
+  @mixin retina-background '../assets/images/background.jpg';
+
+  @media $phone-up {
+    &:before {
+      content: 'media: phone-up';
+    }
+  }
+
+  @media $tablet-up {
+    &:before {
+      content: 'media: tablet-up';
+    }
+  }
+
+  @media $desktop-up {
+    &:before {
+      content: 'media: desktop-up';
+    }
+  }
+
+  @media $desktop-large-up {
+    &:before {
+      content: 'media: desktop-large-up';
+    }
+  }
+
+  @media $desktop-xlarge-up {
+    &:before {
+      content: 'media: desktop-xlarge-up';
+    }
+  }
+
+  @media $desktop-xxlarge-up {
+    &:before {
+      content: 'media: desktop-xxlarge-up';
+    }
+  }
 }
+
+h1 {
+  color: $blue600;
+  transition: transform 0.4s $easeOutBack;
+
+  &:hover {
+    transform: translateX(20px);
+  }
+}
+
 
