@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A webpack starter for angular 2",
   "scripts": {
-    "start": "open http://0.0.0.0:8080; webpack-dev-server --inline --progress --colors --port 8080",
+    "start": "webpack-dev-server --config config/webpack.dev.js --progress --colors",
     "build": "rimraf build && webpack --config config/webpack.prod.js --progress --profile --bail && http-server ./build --cors -c-1 -o",
     "postinstall": "typings install"
   },
@@ -27,6 +27,7 @@
     "autoprefixer": "^6.3.7",
     "autoprefixer-loader": "^3.2.0",
     "css-loader": "^0.23.1",
+    "css-to-string-loader": "^0.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
@@ -41,7 +42,6 @@
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.1",
-    "to-string-loader": "^1.1.4",
     "ts-loader": "^0.8.1",
     "typescript": "^1.8.10",
     "typings": "^1.0.4",

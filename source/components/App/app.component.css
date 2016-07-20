@@ -1,4 +1,5 @@
 @import '../../styles/utils/colors.css';
+@import '../../styles/utils/retina.css';
 
 main {
   padding: 1em;
@@ -9,5 +10,9 @@ main {
 
   h1 {
     color: $deepPurpleA400;
+  }
+
+  .imageTest {
+    @mixin retina-image '../../assets/images/webpack.png';
   }
 }

@@ -36,7 +36,7 @@ module.exports = {
       {
         test: /\.css$/,
         include: helpers.root('source', 'components'),
-        loader: 'to-string!css?sourceMap!postcss'
+        loader: 'css-to-string!css?sourceMap!postcss'
       }
     ]
   },
