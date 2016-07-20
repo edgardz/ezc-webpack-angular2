@@ -4,8 +4,13 @@ import { AppComponent } from './components/App/app.component';
 
 import './styles/global.css';
 
-if (process.env.ENV === 'production') {
-  enableProdMode();
+function main(initialHMRstate) {
+  return bootstrap(AppComponent, []);
 }
 
-bootstrap(AppComponent, []);
+if (process.env.ENV === 'production') {
+  enableProdMode();
+  document.addEventListener('DOMContentLoaded', () => main(null));
+} else {
+  require('angular2-hmr').hotModuleReplacement(main, module);
+}
