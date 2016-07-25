@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HmrState } from 'angular2-hmr';
 
 @Component({
   selector: 'app',
