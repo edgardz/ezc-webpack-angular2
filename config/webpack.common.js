@@ -2,6 +2,7 @@ var webpack           = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers           = require('./helpers');
+var pkg               = require('../package.json');
 
 module.exports = {
   entry: {
@@ -23,6 +24,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'html'
+      },
+      {
+        test: /\.hbs$/,
+        loader: 'handlebars'
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
@@ -58,7 +63,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: 'source/index.html'
+      template: 'source/index.hbs',
+      version: 'v' + pkg.version + '&nbsp;&nbsp;⏱&nbsp;&nbsp;&nbsp;' + new Date().toGMTString()
     })
   ]
 };
