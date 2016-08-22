@@ -8,6 +8,12 @@ const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 module.exports = webpackMerge(commonConfig, {
 
+  entry: {
+    'polyfills':  './source/polyfills.ts',
+    'vendor':     './source/vendor.ts',
+    'app':        './source/main.ts'
+  },
+
   output: {
     path: helpers.root('build'),
     publicPath: '/',

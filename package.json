@@ -4,7 +4,7 @@
   "description": "A webpack starter for angular 2",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js --progress --colors --inline --hot",
-    "build": "rimraf build && webpack --config config/webpack.prod.js --progress --profile --bail && http-server ./build --cors -c-1 -o",
+    "build": "npm version patch && rimraf build && webpack --config config/webpack.prod.js --progress --profile --bail && http-server ./build --cors -c-1 -o",
     "postinstall": "typings install"
   },
   "license": "MIT",

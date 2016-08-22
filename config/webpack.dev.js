@@ -8,6 +8,16 @@ console.log('\n\n --->  WEBPACK RESULT IS SERVED FROM http://0.0.0.0:8080/  <---
 module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
 
+  entry: {
+    'polyfills':  './source/polyfills.js',
+    'vendor':     './source/vendor.js',
+    'app': [
+      'webpack-dev-server/client?http://0.0.0.0:8080',
+      'webpack/hot/only-dev-server',
+      './source/main.js'
+    ]
+  },
+
   output: {
     path: helpers.root('dist'),
     publicPath: '/',

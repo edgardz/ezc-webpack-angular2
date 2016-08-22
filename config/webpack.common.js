@@ -5,11 +5,6 @@ var helpers           = require('./helpers');
 var pkg               = require('../package.json');
 
 module.exports = {
-  entry: {
-    'polyfills':  './source/polyfills.ts',
-    'vendor':     './source/vendor.ts',
-    'app':        './source/main.ts'
-  },
 
   resolve: {
     extensions: ['', '.js', '.ts']
@@ -64,7 +59,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: 'source/index.hbs',
-      version: 'v' + pkg.version + '&nbsp;&nbsp;⏱&nbsp;&nbsp;&nbsp;' + new Date().toGMTString()
+      version: 'v' + pkg.version + '&nbsp;&nbsp;→&nbsp;&nbsp;&nbsp;' + new Date().toGMTString()
     })
   ]
 };
