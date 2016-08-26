@@ -1,6 +1,6 @@
 {
   "name": "angular2-webpack",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A webpack starter for angular 2",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.js --progress --colors --inline --hot",
